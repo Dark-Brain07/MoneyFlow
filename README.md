@@ -1,8 +1,8 @@
-# Money Cycle
+# Money Flow
 
 **Work moves. Money follows.**
 
-Money Cycle is a funded sequential semantic workflow on GenLayer. One payer funds a 2–8 step workflow upfront. Each step freezes its exact tranche, acceptance criteria, public evidence sources, and timing. GenLayer classifies only whether the current active step satisfies those frozen criteria; deterministic contract logic moves the already-committed funds and activates the next step.
+Money Flow is a funded sequential semantic workflow on GenLayer. One payer funds a 2–8 step workflow upfront. Each step freezes its exact tranche, acceptance criteria, public evidence sources, and timing. GenLayer classifies only whether the current active step satisfies those frozen criteria; deterministic contract logic moves the already-committed funds and activates the next step.
 
 **GenLayer verifies progression. Deterministic code moves funds.**
 
@@ -23,9 +23,15 @@ Money Cycle is a funded sequential semantic workflow on GenLayer. One payer fund
 
 The deployed contract source is frozen. Later repository commits change only frontend, verification tooling, evidence documentation, and submission material.
 
+## Test Transactions
+
+The following transactions were executed to verify the contract lifecycle:
+- Create Flow: [`0x28c4a61b49dc67ce8d7a3e6a89b4f4dbcbd8780361aa86f2102c241f029605f6`](https://explorer-studio.genlayer.com/tx/0x28c4a61b49dc67ce8d7a3e6a89b4f4dbcbd8780361aa86f2102c241f029605f6)
+- Accept Flow: [`0x16dc270617ee9214f830ff371b2b1391eb982e9a6b648f263dbe6a618bb84dbb`](https://explorer-studio.genlayer.com/tx/0x16dc270617ee9214f830ff371b2b1391eb982e9a6b648f263dbe6a618bb84dbb)
+
 ## Architecture
 
-Money Cycle enforces:
+Money Flow enforces:
 
 - 2–8 ordered steps
 - full funding upfront
