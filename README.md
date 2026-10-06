@@ -8,6 +8,7 @@ Money Flow is a funded sequential semantic workflow on GenLayer. One payer funds
 
 ## Live deployment
 
+- Article: [Money Flow: The Future of Funded Work on GenLayer](https://medium.com/@engraju007/money-flow-the-future-of-funded-work-on-genlayer-999e3ce9674f)
 - Live app: https://MoneyFlow-three.vercel.app/
 - Operational app: https://MoneyFlow-three.vercel.app/app
 - Canonical contract: [`0x9251D88840bCa34A2b9f60AE3fAC407afcAe89C0`](https://explorer-studio.genlayer.com/address/0x9251D88840bCa34A2b9f60AE3fAC407afcAe89C0)
