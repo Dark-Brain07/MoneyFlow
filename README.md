@@ -76,6 +76,6 @@ MoneyFlow_LIVE_FRONTEND=https://MoneyFlow-three.vercel.app \
 node scripts/verify_live_frontend.mjs
 ```
 
-The Direct Mode suite remains diagnostic only for the pinned stable v0.2.16 harness. That local harness fails during runtime-message decoding before Money Cycle executes, so it is not described as a Direct Mode pass. Finalized Studionet execution is the authoritative live-runtime evidence.
+The Direct Mode suite remains diagnostic only for the pinned stable v0.2.16 harness. That local harness fails during runtime-message decoding before Money Flow executes, so it is not described as a Direct Mode pass. Finalized Studionet execution is the authoritative live-runtime evidence.
 
 See also: [BUILD_STATUS.md](BUILD_STATUS.md), [SUBMISSION.md](SUBMISSION.md), [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md), and [DEMO.md](DEMO.md).

@@ -1,4 +1,4 @@
-"""Offline behavioral matrix for deterministic Flowed invariants.
+"""Offline behavioral matrix for deterministic MoneyFlow invariants.
 
 These tests exercise the protocol state transitions independently of GenVM. The
 Direct Mode suite is separate and is never counted as these tests.

@@ -21,7 +21,7 @@
 - Flow 1 visible: ✅
 - Flow 2 visible: ✅
 - Injected EIP-1193 wallet only: ✅
-- Money Cycle-local disconnect: ✅
+- Money Flow-local disconnect: ✅
 - Wrong-chain detection and Studionet switch: ✅
 - 4902 add-network fallback: ✅
 - Exact `BigInt` GEN handling: ✅
@@ -84,4 +84,4 @@ Current global accounting after both Flows:
 - Vercel live verification: ✅
 - GitHub Actions: ✅ required final runs inspected after push
 
-Direct Mode remains a **diagnostic limitation**, not a genuine PASS. The pinned v0.2.16 local Direct Mode harness raises `DecodingError: unexpected end of memory` during SDK import before Money Cycle contract execution is reached. Finalized Studionet evidence is therefore the authoritative live-runtime proof.
+Direct Mode remains a **diagnostic limitation**, not a genuine PASS. The pinned v0.2.16 local Direct Mode harness raises `DecodingError: unexpected end of memory` during SDK import before Money Flow contract execution is reached. Finalized Studionet evidence is therefore the authoritative live-runtime proof.

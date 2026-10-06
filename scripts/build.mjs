@@ -8,17 +8,17 @@ for (const file of ['index.html', 'landing.css', 'landing.js', 'styles.css', 'ap
 }
 await cp('app/index.html', 'dist/app/index.html');
 
-const address = (process.env.FLOWED_CONTRACT_ADDRESS || CANONICAL_CONTRACT).trim();
+const address = (process.env.MoneyFlow_CONTRACT_ADDRESS || CANONICAL_CONTRACT).trim();
 if (!/^0x[a-fA-F0-9]{40}$/.test(address)) {
-  throw new Error('FLOWED_CONTRACT_ADDRESS must be a 20-byte hex address');
+  throw new Error('MoneyFlow_CONTRACT_ADDRESS must be a 20-byte hex address');
 }
 if (address.toLowerCase() !== CANONICAL_CONTRACT.toLowerCase()) {
-  throw new Error(`Production build must target canonical Flowed contract ${CANONICAL_CONTRACT}`);
+  throw new Error(`Production build must target canonical MoneyFlow contract ${CANONICAL_CONTRACT}`);
 }
 
 await writeFile(
   'dist/config.js',
-  `window.FLOWED_CONFIG = Object.freeze(${JSON.stringify({
+  `window.MoneyFlow_CONFIG = Object.freeze(${JSON.stringify({
     network: 'GenLayer Studionet',
     chainId: 61999,
     rpc: 'https://studio.genlayer.com/api',

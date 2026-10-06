@@ -1,11 +1,11 @@
-const RECIPIENT = (process.env.FLOWED_RECIPIENT || '').trim();
-const PAYER = (process.env.FLOWED_PAYER || '').trim();
+const RECIPIENT = (process.env.MoneyFlow_RECIPIENT || '').trim();
+const PAYER = (process.env.MoneyFlow_PAYER || '').trim();
 
 if (!/^0x[a-fA-F0-9]{40}$/.test(RECIPIENT)) {
-  throw new Error('Set FLOWED_RECIPIENT to the distinct recipient wallet address');
+  throw new Error('Set MoneyFlow_RECIPIENT to the distinct recipient wallet address');
 }
 if (PAYER) {
-  if (!/^0x[a-fA-F0-9]{40}$/.test(PAYER)) throw new Error('FLOWED_PAYER is not a valid address');
+  if (!/^0x[a-fA-F0-9]{40}$/.test(PAYER)) throw new Error('MoneyFlow_PAYER is not a valid address');
   if (PAYER.toLowerCase() === RECIPIENT.toLowerCase()) throw new Error('Payer and recipient must be distinct');
 }
 
@@ -18,21 +18,21 @@ const acceptBy = BigInt(Math.floor(Date.now() / 1000) + 3600);
 const evidenceCommit = 'eb7cfea7fa192517186334a900dba33ee6a70dd9';
 
 const steps = [1, 2, 3].map((n) => ({
-  title: `Flowed demo stage ${n}`,
-  criteria: `The evidence states that Flowed demo stage ${n} is complete.`,
+  title: `MoneyFlow demo stage ${n}`,
+  criteria: `The evidence states that MoneyFlow demo stage ${n} is complete.`,
   amount_wei: AMOUNT.toString(),
   ttl_seconds: TTL,
   sources: [{
-    label: `Flowed demo stage ${n} completion record`,
-    url: `https://raw.githubusercontent.com/Ifem1/flowed/${evidenceCommit}/demo-evidence/step-${n}.txt`,
+    label: `MoneyFlow demo stage ${n} completion record`,
+    url: `https://raw.githubusercontent.com/Ifem1/MoneyFlow/${evidenceCommit}/demo-evidence/step-${n}.txt`,
     required: true,
   }],
 }));
 
 const payload = {
   recipient: RECIPIENT,
-  title: 'Flowed canonical contest verification',
-  summary: 'Canonical three-step Flowed lifecycle proving funded sequential progression, semantic verification, deterministic tranche release and same-snapshot contest resolution.',
+  title: 'MoneyFlow canonical contest verification',
+  summary: 'Canonical three-step MoneyFlow lifecycle proving funded sequential progression, semantic verification, deterministic tranche release and same-snapshot contest resolution.',
   accept_by: acceptBy.toString(),
   contest_window_seconds: CONTEST_WINDOW.toString(),
   escrow_amount: TOTAL.toString(),

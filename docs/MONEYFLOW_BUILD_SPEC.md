@@ -1,15 +1,15 @@
-# Money Cycle — Master Build Specification
+# Money Flow — Master Build Specification
 
 **Repository:** https://github.com/Ifem1/MoneyFlow  
-**Product:** Money Cycle  
+**Product:** Money Flow  
 **Tagline:** **Work moves. Money follows.**  
 **Canonical network for this build:** **GenLayer Studionet — Chain ID 61999**  
 **Core contract count:** **1**  
-**Core contract:** `contracts/Money Cycle.py`
+**Core contract:** `contracts/Money Flow.py`
 
 > **Final-status note**
 >
-> This document is the original implementation specification and is retained as historical design context. Money Cycle is now deployed and fully verified. For current production status, canonical live evidence, final accounting, and submission readiness, use:
+> This document is the original implementation specification and is retained as historical design context. Money Flow is now deployed and fully verified. For current production status, canonical live evidence, final accounting, and submission readiness, use:
 >
 > - `BUILD_STATUS.md`
 > - `docs/LIVE_VERIFICATION.md`
@@ -22,7 +22,7 @@
 
 ## 0. Purpose of this document
 
-This document is the source of truth for building **Money Cycle**.
+This document is the source of truth for building **Money Flow**.
 
 The goal is not to produce a demo that merely compiles. The goal is to produce a reviewer-ready GenLayer product with the same standard of mechanism clarity, contract discipline, engineering proof, live verification, and submission polish expected from top-tier GenLayer projects.
 
@@ -41,7 +41,7 @@ The build must be complete enough that a later audit can answer **yes** to all o
 - Is there real live Studionet proof, not only mocks?
 - Is the repository clear enough that a steward can independently verify what happened?
 
-Do not add features merely to make the repository larger. Money Cycle should win on **clarity, correctness, necessity, and proof**.
+Do not add features merely to make the repository larger. Money Flow should win on **clarity, correctness, necessity, and proof**.
 
 ---
 
@@ -49,7 +49,7 @@ Do not add features merely to make the repository larger. Money Cycle should win
 
 ## 1.1 One-line definition
 
-**Money Cycle is a funded semantic workflow protocol where GenLayer determines whether the currently active work step has been completed, and deterministic contract logic releases the exact precommitted payment for that step.**
+**Money Flow is a funded semantic workflow protocol where GenLayer determines whether the currently active work step has been completed, and deterministic contract logic releases the exact precommitted payment for that step.**
 
 ## 1.2 Product thesis
 
@@ -63,7 +63,7 @@ Neither can naturally understand a condition such as:
 
 A centralized backend could inspect that evidence, but then the backend becomes the payment authority.
 
-Money Cycle separates the responsibilities:
+Money Flow separates the responsibilities:
 
 > **GenLayer determines whether the active workflow condition is satisfied. Deterministic contract code controls the money and the workflow progression.**
 
@@ -81,9 +81,9 @@ The model only classifies the frozen evidence for the **currently active step**.
 
 # 2. Product identity and strict distinctness
 
-Money Cycle must remain clearly distinct from other projects that inspired architectural lessons.
+Money Flow must remain clearly distinct from other projects that inspired architectural lessons.
 
-## 2.1 Money Cycle is not a guarantee protocol
+## 2.1 Money Flow is not a guarantee protocol
 
 Do not use product language such as:
 
@@ -96,11 +96,11 @@ Do not use product language such as:
 - insured
 - claim payout
 
-Money Cycle is about **progressive funded work**, not post-event guarantee settlement.
+Money Flow is about **progressive funded work**, not post-event guarantee settlement.
 
-## 2.2 Money Cycle is not a bounty protocol
+## 2.2 Money Flow is not a bounty protocol
 
-Do not frame Money Cycle as:
+Do not frame Money Flow as:
 
 - “submit proof and win a bounty”
 - “open competition”
@@ -110,7 +110,7 @@ Do not frame Money Cycle as:
 
 A Flow has one named payer and one named recipient. The relationship exists before work begins.
 
-## 2.3 Money Cycle is not code-governance infrastructure
+## 2.3 Money Flow is not code-governance infrastructure
 
 Do not use:
 
@@ -123,9 +123,9 @@ Do not use:
 - code-safety gates
 - upgrade installation
 
-Money Cycle evaluates **real-world workflow completion**, not whether code amendments may be installed.
+Money Flow evaluates **real-world workflow completion**, not whether code amendments may be installed.
 
-## 2.4 Money Cycle vocabulary
+## 2.4 Money Flow vocabulary
 
 Use these terms consistently throughout contract, frontend, docs, tests, and submission copy:
 
@@ -229,7 +229,7 @@ These can be future work. They are not needed for V1 quality.
 
 > **Work advances only when GenLayer establishes that the currently active step is satisfied, and money advances only according to the amount frozen for that step before work began.**
 
-## 4.2 The strongest Money Cycle invariant
+## 4.2 The strongest Money Flow invariant
 
 A later step can never bypass an earlier one.
 
@@ -245,7 +245,7 @@ Where possible, write functions should take only `flow_id` and internally resolv
 
 # 5. Network requirement
 
-Build and deploy Money Cycle on:
+Build and deploy Money Flow on:
 
 ```text
 Network:  GenLayer Studionet
@@ -270,16 +270,16 @@ Production architecture:
 
 ```text
 contracts/
-└── Money Cycle.py
+└── Money Flow.py
 ```
 
 Do not deploy a second production contract.
 
-A test fixture or helper contract may exist only if absolutely required by GenLayer testing, and it must be clearly marked as a test fixture rather than part of Money Cycle's architecture.
+A test fixture or helper contract may exist only if absolutely required by GenLayer testing, and it must be clearly marked as a test fixture rather than part of Money Flow's architecture.
 
 ## 6.2 No contract owner
 
-`Money Cycle.py` should not have a protocol owner who can:
+`Money Flow.py` should not have a protocol owner who can:
 
 - seize escrow
 - alter Flow terms
@@ -510,7 +510,7 @@ This is deliberate.
 
 A future step must not lose its work window simply because an earlier step took longer than expected.
 
-This is part of Money Cycle's identity as a sequential state machine.
+This is part of Money Flow's identity as a sequential state machine.
 
 ---
 
@@ -591,7 +591,7 @@ Truncate deterministically.
 
 # 11. Snapshot-before-semantic-review architecture
 
-This is a key Money Cycle security design.
+This is a key Money Flow security design.
 
 Do not fetch arbitrary changing evidence independently inside each model call.
 
@@ -628,7 +628,7 @@ SOURCE_UNAVAILABLE
 
 Only after there is a stable snapshot should GenLayer classify it.
 
-This architecture gives Money Cycle a much clearer boundary:
+This architecture gives Money Flow a much clearer boundary:
 
 > **Consensus first agrees on what evidence is being reviewed, then semantic validators decide whether that evidence satisfies the active step.**
 
@@ -923,7 +923,7 @@ They can improve the work/evidence and request another primary review before the
 
 The contest exists specifically to give the payer a bounded check against a provisional release.
 
-This keeps Money Cycle's mechanism simpler and more distinct.
+This keeps Money Flow's mechanism simpler and more distinct.
 
 ---
 
@@ -1508,7 +1508,7 @@ Use an injected wallet/provider.
 
 ## 27.8 No fake authority
 
-Do not describe Money Cycle as proving legal truth, legal completion, or objective real-world truth.
+Do not describe Money Flow as proving legal truth, legal completion, or objective real-world truth.
 
 It determines whether frozen public evidence satisfies frozen workflow acceptance criteria under GenLayer consensus.
 
@@ -1551,7 +1551,7 @@ A simple static frontend on Vercel is preferred.
 
 # 29. Visual identity
 
-Money Cycle must not visually look like Redeem or QuorumVault.
+Money Flow must not visually look like Redeem or QuorumVault.
 
 Recommended identity:
 
@@ -1599,7 +1599,7 @@ Tagline:
 
 Must explain within one screen:
 
-- what Money Cycle is
+- what Money Flow is
 - why GenLayer is required
 - how work progression maps to payment progression
 - CTA to create/browse flows
@@ -2059,9 +2059,9 @@ After contract logic is frozen:
 10. perform live Flow
 11. update documentation
 12. run CI again
-13. do not change `Money Cycle.py` afterward without invalidating the canonical deployment
+13. do not change `Money Flow.py` afterward without invalidating the canonical deployment
 
-If `Money Cycle.py` changes after deployment, deploy again and update canonical evidence.
+If `Money Flow.py` changes after deployment, deploy again and update canonical evidence.
 
 Do not pretend an older address is still canonical.
 
@@ -2077,7 +2077,7 @@ MoneyFlow/
 │   └── workflows/
 │       └── ci.yml
 ├── contracts/
-│   └── Money Cycle.py
+│   └── Money Flow.py
 ├── demo-evidence/
 │   ├── step-1.txt
 │   ├── step-2.txt
@@ -2115,7 +2115,7 @@ The README should be reviewer-grade.
 Required top section:
 
 ```text
-Money Cycle
+Money Flow
 Work moves. Money follows.
 
 Live app:
@@ -2129,7 +2129,7 @@ Deployment tx:
 
 Then:
 
-1. What Money Cycle is
+1. What Money Flow is
 2. Why GenLayer is necessary
 3. Core lifecycle
 4. Why AI cannot control payment amounts
@@ -2358,7 +2358,7 @@ Reviewer should see:
 
 A reviewer should be able to say in one sentence:
 
-> Money Cycle turns a funded job into a sequential semantic state machine: when GenLayer establishes that the active step is complete, the contract releases its precommitted tranche and activates the next step.
+> Money Flow turns a funded job into a sequential semantic state machine: when GenLayer establishes that the active step is complete, the contract releases its precommitted tranche and activates the next step.
 
 If the implementation becomes harder to explain than that, scope has drifted.
 
@@ -2385,7 +2385,7 @@ Do not:
 - leave deployment docs pointing to stale addresses
 - claim a test is live if it is mocked
 - claim a source commit if deployed bytecode came from another version
-- introduce Redeem, QuorumVault, or Proof Bounty branding anywhere in Money Cycle
+- introduce Redeem, QuorumVault, or Proof Bounty branding anywhere in Money Flow
 
 ---
 
@@ -2477,7 +2477,7 @@ Only fix actual blockers.
 
 # 47. Final audit checklist
 
-Before saying Money Cycle is ready, verify all of these.
+Before saying Money Flow is ready, verify all of these.
 
 ## Contract
 
@@ -2521,7 +2521,7 @@ Before saying Money Cycle is ready, verify all of these.
 - [ ] full create/accept/review/contest/finalize UX
 - [ ] finality-aware transaction states
 - [ ] responsive
-- [ ] Money Cycle-specific identity
+- [ ] Money Flow-specific identity
 - [ ] favicon/logo
 
 ## Engineering
@@ -2566,7 +2566,7 @@ Before saying Money Cycle is ready, verify all of these.
 
 # 48. Final stop condition for the build agent
 
-The agent should not report Money Cycle as complete until it can truthfully return:
+The agent should not report Money Flow as complete until it can truthfully return:
 
 ```text
 MoneyFlow BUILD COMPLETE
@@ -2602,11 +2602,11 @@ If any of those are not true, report the exact blocker instead of declaring comp
 
 # 49. Final product statement
 
-Money Cycle should ultimately be explainable as:
+Money Flow should ultimately be explainable as:
 
-> **Money Cycle turns funded work into a sequential semantic state machine. A payer escrows the full budget and freezes the work steps, acceptance criteria, evidence sources, timing, and payment attached to each step. GenLayer reviews only the currently active step against a frozen evidence snapshot. A satisfied step becomes provisional, the payer receives a bounded contest opportunity, and deterministic contract logic releases exactly the precommitted tranche before activating the next step. AI verifies progression. The contract moves the money.**
+> **Money Flow turns funded work into a sequential semantic state machine. A payer escrows the full budget and freezes the work steps, acceptance criteria, evidence sources, timing, and payment attached to each step. GenLayer reviews only the currently active step against a frozen evidence snapshot. A satisfied step becomes provisional, the payer receives a bounded contest opportunity, and deterministic contract logic releases exactly the precommitted tranche before activating the next step. AI verifies progression. The contract moves the money.**
 
 And the identity remains:
 
-# **Money Cycle**
+# **Money Flow**
 ## **Work moves. Money follows.**

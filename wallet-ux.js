@@ -33,7 +33,7 @@ export function walletMenuItems(state) {
   if (!state.wallet) return [];
   const items = ['Copy address'];
   if (state.chainId !== MoneyFlow_CHAIN_ID) items.push('Switch to Studionet');
-  items.push('Disconnect from Money Cycle');
+  items.push('Disconnect from Money Flow');
   return items;
 }
 

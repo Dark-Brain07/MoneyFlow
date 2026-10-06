@@ -1,14 +1,14 @@
-# Money Cycle build specification
+# Money Flow build specification
 
 **Tagline:** Work moves. Money follows.
 
-**Reviewer sentence:** “Money Cycle turns funded work into a sequential semantic state machine: when GenLayer establishes that the active step is complete, deterministic contract logic releases its precommitted tranche and activates the next step.”
+**Reviewer sentence:** “Money Flow turns funded work into a sequential semantic state machine: when GenLayer establishes that the active step is complete, deterministic contract logic releases its precommitted tranche and activates the next step.”
 
 ## Frozen product boundary
 
-Money Cycle is a funded sequential semantic workflow. One payer funds the complete workflow and one recipient progresses through 2–8 ordered work steps. Every step freezes its exact tranche, acceptance criteria, public evidence sources, and relative TTL at creation. GenLayer judges only whether the current active step satisfies its frozen criteria against a frozen evidence snapshot. It never selects amounts, recipients, ordering, refunds, or the active step.
+Money Flow is a funded sequential semantic workflow. One payer funds the complete workflow and one recipient progresses through 2–8 ordered work steps. Every step freezes its exact tranche, acceptance criteria, public evidence sources, and relative TTL at creation. GenLayer judges only whether the current active step satisfies its frozen criteria against a frozen evidence snapshot. It never selects amounts, recipients, ordering, refunds, or the active step.
 
-Money Cycle is not a bounty, guarantee protocol, DAO, marketplace, reputation layer, code-governance system, generic escrow, or AI payment allocator.
+Money Flow is not a bounty, guarantee protocol, DAO, marketplace, reputation layer, code-governance system, generic escrow, or AI payment allocator.
 
 ## Network and production source
 

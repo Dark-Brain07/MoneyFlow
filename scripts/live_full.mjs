@@ -4,13 +4,13 @@ import { TransactionHashVariant, TransactionStatus } from 'genlayer-js/types';
 import { parseLosslessJson } from '../lossless-json.js';
 
 const CANONICAL_CONTRACT = '0x9251D88840bCa34A2b9f60AE3fAC407afcAe89C0';
-const CONTRACT = (process.env.FLOWED_CONTRACT_ADDRESS || CANONICAL_CONTRACT).trim();
-const FLOW_ID = (process.env.FLOWED_FLOW_ID || '').trim();
-const HASHES = (process.env.FLOWED_TX_HASHES || '').split(',').map((x) => x.trim()).filter(Boolean);
-const EXPECT_CANONICAL_DEMO = process.env.FLOWED_EXPECT_CANONICAL_DEMO === '1';
+const CONTRACT = (process.env.MoneyFlow_CONTRACT_ADDRESS || CANONICAL_CONTRACT).trim();
+const FLOW_ID = (process.env.MoneyFlow_FLOW_ID || '').trim();
+const HASHES = (process.env.MoneyFlow_TX_HASHES || '').split(',').map((x) => x.trim()).filter(Boolean);
+const EXPECT_CANONICAL_DEMO = process.env.MoneyFlow_EXPECT_CANONICAL_DEMO === '1';
 
 if (CONTRACT.toLowerCase() !== CANONICAL_CONTRACT.toLowerCase()) {
-  throw new Error('Live verification must target the canonical Flowed contract');
+  throw new Error('Live verification must target the canonical MoneyFlow contract');
 }
 if (studionet.id !== 61999) throw new Error(`Wrong genlayer-js network definition: ${studionet.id}`);
 
@@ -70,7 +70,7 @@ for (const hash of HASHES) {
 }
 
 if (FLOW_ID) {
-  if (!/^\d+$/.test(FLOW_ID) || FLOW_ID === '0') throw new Error('FLOWED_FLOW_ID must be a positive integer');
+  if (!/^\d+$/.test(FLOW_ID) || FLOW_ID === '0') throw new Error('MoneyFlow_FLOW_ID must be a positive integer');
   const raw = await read('get_flow', [BigInt(FLOW_ID)]);
   const flow = parseLosslessJson(raw);
   const activeRaw = await read('get_active_step', [BigInt(FLOW_ID)]);

@@ -1,9 +1,9 @@
 # v0.2.16
 # { "Depends": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6" }
 
-"""Money Cycle: funded sequential semantic workflows for GenLayer Studionet (61999).
+"""Money Flow: funded sequential semantic workflows for GenLayer Studionet (61999).
 
-Money Cycle turns funded work into a sequential semantic state machine: when GenLayer
+Money Flow turns funded work into a sequential semantic state machine: when GenLayer
 establishes that the active step is complete, deterministic contract logic releases
 its precommitted tranche and activates the next step.
 """

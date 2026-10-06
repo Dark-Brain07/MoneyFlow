@@ -2,11 +2,11 @@ import { createClient } from 'genlayer-js';
 import { studionet } from 'genlayer-js/chains';
 import { TransactionHashVariant } from 'genlayer-js/types';
 
-const BASE = (process.env.FLOWED_LIVE_FRONTEND || 'https://flowed-eight.vercel.app').replace(/\/$/, '');
+const BASE = (process.env.MoneyFlow_LIVE_FRONTEND || 'https://MoneyFlow-eight.vercel.app').replace(/\/$/, '');
 const CONTRACT = '0x9251D88840bCa34A2b9f60AE3fAC407afcAe89C0';
 const EXPECTED_CHAIN_ID = 61999;
-const RETRIES = Number(process.env.FLOWED_FRONTEND_RETRIES || 18);
-const RETRY_MS = Number(process.env.FLOWED_FRONTEND_RETRY_MS || 10000);
+const RETRIES = Number(process.env.MoneyFlow_FRONTEND_RETRIES || 18);
+const RETRY_MS = Number(process.env.MoneyFlow_FRONTEND_RETRY_MS || 10000);
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -16,7 +16,7 @@ async function fetchText(path) {
     redirect: 'follow',
     cache: 'no-store',
     signal: AbortSignal.timeout(15000),
-    headers: { 'user-agent': 'Flowed-Phase1-Verification/1.0' },
+    headers: { 'user-agent': 'MoneyFlow-Phase1-Verification/1.0' },
   });
   if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
   const text = await response.text();
@@ -73,7 +73,7 @@ for (const source of [landingJs, appJs, walletUx, config, lossless]) {
 for (const phrase of [
   'WORK MOVES.',
   'MONEY FOLLOWS.',
-  'OPEN FLOWED',
+  'OPEN MoneyFlow',
   'One workflow.',
   'AI verifies progression.',
   'Disagreement',
@@ -81,7 +81,7 @@ for (const phrase of [
 ]) {
   if (!landing.text.includes(phrase)) throw new Error(`Landing page missing required content: ${phrase}`);
 }
-if (!landing.text.includes('href="/app"')) throw new Error('Landing page OPEN FLOWED route is not /app');
+if (!landing.text.includes('href="/app"')) throw new Error('Landing page OPEN MoneyFlow route is not /app');
 if (!landing.text.includes('id="hero-route"')) throw new Error('Landing page missing sequential route visual');
 for (const index of ['0','1','2','3','4']) {
   if (!landing.text.includes(`data-route-node="${index}"`) || !landing.text.includes(`data-node-label="${index}"`)) {
@@ -111,11 +111,11 @@ if (!appPage.text.includes('src="/config.js"') || !appPage.text.includes('src="/
   throw new Error('/app does not use root production assets');
 }
 if (!appCss.text.includes('#D95C32') || !appCss.text.includes('#9D3656') || !appCss.text.includes('#501F31')) {
-  throw new Error('Operational app missing locked warm Flowed palette');
+  throw new Error('Operational app missing locked warm MoneyFlow palette');
 }
 if (!appCss.text.includes('var(--success)')) throw new Error('Operational app missing semantic success color treatment');
 
-if (!config.text.includes(CONTRACT)) throw new Error('Production config missing canonical Flowed contract');
+if (!config.text.includes(CONTRACT)) throw new Error('Production config missing canonical MoneyFlow contract');
 if (!/chainId[\"']?\s*[:=]\s*61999|\"chainId\":61999/.test(config.text)) throw new Error('Production config missing Studionet 61999');
 if (!config.text.includes('https://studio.genlayer.com/api')) throw new Error('Production config missing canonical RPC');
 
@@ -125,7 +125,7 @@ for (const method of ['get_flow_count','get_flow','get_active_step','get_account
 for (const method of ['create_flow','accept_flow','decline_flow','withdraw_offer','expire_unaccepted_flow','review_active_step','contest_active_step','resolve_contest','finalize_active_step','finalize_stalled_contest','abandon_flow','expire_active_flow']) {
   if (!appJs.text.includes(method)) throw new Error(`Production app missing write ${method}`);
 }
-for (const token of ['eth_requestAccounts','TransactionStatus.FINALIZED','fullTransaction:true','parseLosslessJson','ensureWriteNetwork','disconnectFlowedState','copyFullWalletAddress']) {
+for (const token of ['eth_requestAccounts','TransactionStatus.FINALIZED','fullTransaction:true','parseLosslessJson','ensureWriteNetwork','disconnectMoneyFlowState','copyFullWalletAddress']) {
   if (!appJs.text.includes(token)) throw new Error(`Production app missing required wallet/finality token: ${token}`);
 }
 for (const token of ['wallet_switchEthereumChain','wallet_addEthereumChain','0xf22f','GenLayer Studionet','https://studio.genlayer.com/api']) {
@@ -141,8 +141,8 @@ if (!appJs.text.includes('10n**18n') || !appJs.text.includes('/20n')) {
   throw new Error('Production app missing exact BigInt GEN/bond arithmetic');
 }
 if (!lossless.text.includes('stringifyJsonIntegers')) throw new Error('Lossless JSON integer helper missing');
-if (appJs.text.includes('FLOWED_LIVE_FLOWS')) throw new Error('Forbidden fake Flow data source present');
-if (/private\s*key|private_key|FLOWED_PRIVATE_KEY/i.test(appJs.text + appPage.text)) {
+if (appJs.text.includes('MoneyFlow_LIVE_FLOWS')) throw new Error('Forbidden fake Flow data source present');
+if (/private\s*key|private_key|MoneyFlow_PRIVATE_KEY/i.test(appJs.text + appPage.text)) {
   throw new Error('Production app exposes browser private-key wording');
 }
 

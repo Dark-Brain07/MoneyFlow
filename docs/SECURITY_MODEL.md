@@ -6,7 +6,7 @@ The production contract is frozen at commit `c628a86951d59de4c774d89cb4c8ae5cbb1
 
 ## Protected properties
 
-Money Cycle freezes economic and semantic terms at creation. The production contract enforces:
+Money Flow freezes economic and semantic terms at creation. The production contract enforces:
 
 - one payer and one distinct non-zero recipient
 - 2–8 ordered steps
@@ -51,4 +51,4 @@ The browser uses integer `BigInt` GEN handling. It does not expose private-key e
 
 GenLayer consensus evaluates supplied public evidence; it does not guarantee the underlying evidence is objectively true. Participants remain responsible for choosing criteria and sources that can meaningfully establish completion. The contract performs textual URL hardening for HTTPS and obvious local/private hosts; the GenLayer web runtime remains part of the trust boundary for network resolution, redirects, and fetch isolation. Wallet key security and injected-wallet behavior are outside the contract.
 
-The pinned local Direct Mode harness currently fails before Money Cycle execution while decoding the stable v0.2.16 runtime message. That limitation is kept visible and is not treated as semantic proof. Only finalized Studionet artifacts are described as live evidence.
+The pinned local Direct Mode harness currently fails before Money Flow execution while decoding the stable v0.2.16 runtime message. That limitation is kept visible and is not treated as semantic proof. Only finalized Studionet artifacts are described as live evidence.

@@ -2,7 +2,7 @@
 
 ## Canonical production deployment
 
-Money Cycle is already deployed. Do **not** redeploy or modify `contracts/Money Cycle.py`.
+Money Flow is already deployed. Do **not** redeploy or modify `contracts/Money Flow.py`.
 
 - Network: **GenLayer Studionet**
 - Chain ID: **61999**

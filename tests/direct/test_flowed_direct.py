@@ -1,10 +1,10 @@
-"""Genuine Direct Mode tests: execute contracts/Flowed.py in-memory via genlayer-test."""
+"""Genuine Direct Mode tests: execute contracts/MoneyFlow.py in-memory via genlayer-test."""
 import json
 
 import pytest
 from gltest.direct import create_address
 
-CONTRACT = "contracts/Flowed.py"
+CONTRACT = "contracts/MoneyFlow.py"
 SDK_VERSION = "v0.2.16"
 BASE_TIME = "2026-09-17T20:00:00Z"
 ACCEPT_BY = 1_800_000_000
