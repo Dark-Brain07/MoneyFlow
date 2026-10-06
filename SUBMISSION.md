@@ -32,9 +32,9 @@ The model is allowed to classify the frozen evidence snapshot as `SATISFIED`, `N
 
 - Live app: https://MoneyFlow-three.vercel.app/
 - Operational app: https://MoneyFlow-three.vercel.app/app
-- Canonical contract: [`0xB99Bb11Cf0d0DC684A6b7E3653C168b7E397723F`](https://explorer-studio.genlayer.com/address/0xB99Bb11Cf0d0DC684A6b7E3653C168b7E397723F)
+- Canonical contract: [`0x9251D88840bCa34A2b9f60AE3fAC407afcAe89C0`](https://explorer-studio.genlayer.com/address/0x9251D88840bCa34A2b9f60AE3fAC407afcAe89C0)
 - Network: GenLayer Studionet `61999`
 - Canonical deployed source: `c628a86951d59de4c774d89cb4c8ae5cbb1e4e47`
-- Deployment tx: [`0xdcbcc202405a347997641c560e09d9167131cc581a37474fc28fd2e9e1d78425`](https://explorer-studio.genlayer.com/tx/0xdcbcc202405a347997641c560e09d9167131cc581a37474fc28fd2e9e1d78425)
+- Deployment tx: [`0x3ad3f57eb8d419b6ebe6a60208b879241fcde303f9176cb14e8ecb8a310c8480`](https://explorer-studio.genlayer.com/tx/0x3ad3f57eb8d419b6ebe6a60208b879241fcde303f9176cb14e8ecb8a310c8480)
 
 

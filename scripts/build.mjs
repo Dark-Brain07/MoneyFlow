@@ -1,6 +1,6 @@
 import { cp, mkdir, writeFile } from 'node:fs/promises';
 
-const CANONICAL_CONTRACT = '0xE7aE476b544afe3A38954BBf15f7BE3A4FA4D8Ad';
+const CANONICAL_CONTRACT = '0x9251D88840bCa34A2b9f60AE3fAC407afcAe89C0';
 
 await mkdir('dist/app', { recursive: true });
 for (const file of ['index.html', 'landing.css', 'landing.js', 'styles.css', 'app.js', 'wallet-ux.js', 'lossless-json.js']) {

@@ -2,7 +2,7 @@
 
 Money Cycle is intentionally one production Intelligent Contract: `contracts/Money Cycle.py`. It is a funded sequential semantic state machine, not a generic escrow or AI payment allocator.
 
-The production contract is frozen at source commit `c628a86951d59de4c774d89cb4c8ae5cbb1e4e47` and deployed on GenLayer Studionet `61999` at `0xB99Bb11Cf0d0DC684A6b7E3653C168b7E397723F`. Post-deployment repository commits may change frontend, CI, evidence, and documentation, but `contracts/Money Cycle.py` must remain byte-identical to the deployed source.
+The production contract is frozen at source commit `c628a86951d59de4c774d89cb4c8ae5cbb1e4e47` and deployed on GenLayer Studionet `61999` at `0x9251D88840bCa34A2b9f60AE3fAC407afcAe89C0`. Post-deployment repository commits may change frontend, CI, evidence, and documentation, but `contracts/Money Cycle.py` must remain byte-identical to the deployed source.
 
 ## State machine
 

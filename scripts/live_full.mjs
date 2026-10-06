@@ -3,7 +3,7 @@ import { studionet } from 'genlayer-js/chains';
 import { TransactionHashVariant, TransactionStatus } from 'genlayer-js/types';
 import { parseLosslessJson } from '../lossless-json.js';
 
-const CANONICAL_CONTRACT = '0xE7aE476b544afe3A38954BBf15f7BE3A4FA4D8Ad';
+const CANONICAL_CONTRACT = '0x9251D88840bCa34A2b9f60AE3fAC407afcAe89C0';
 const CONTRACT = (process.env.FLOWED_CONTRACT_ADDRESS || CANONICAL_CONTRACT).trim();
 const FLOW_ID = (process.env.FLOWED_FLOW_ID || '').trim();
 const HASHES = (process.env.FLOWED_TX_HASHES || '').split(',').map((x) => x.trim()).filter(Boolean);

@@ -3,7 +3,7 @@ import { studionet } from 'genlayer-js/chains';
 import { TransactionHashVariant } from 'genlayer-js/types';
 
 const BASE = (process.env.FLOWED_LIVE_FRONTEND || 'https://flowed-eight.vercel.app').replace(/\/$/, '');
-const CONTRACT = '0xE7aE476b544afe3A38954BBf15f7BE3A4FA4D8Ad';
+const CONTRACT = '0x9251D88840bCa34A2b9f60AE3fAC407afcAe89C0';
 const EXPECTED_CHAIN_ID = 61999;
 const RETRIES = Number(process.env.FLOWED_FRONTEND_RETRIES || 18);
 const RETRY_MS = Number(process.env.FLOWED_FRONTEND_RETRY_MS || 10000);

@@ -4,8 +4,8 @@ import { ExecutionResult, TransactionHashVariant, TransactionStatus } from 'genl
 
 const RPC = 'https://studio.genlayer.com/api';
 const CHAIN_ID = 61999n;
-const CONTRACT = '0xE7aE476b544afe3A38954BBf15f7BE3A4FA4D8Ad';
-const DEPLOYMENT_TX = '0xdb045eda9076fc5c2053fc1f23655856005b8962dd1a7eebfca873ba7be5326a';
+const CONTRACT = '0x9251D88840bCa34A2b9f60AE3fAC407afcAe89C0';
+const DEPLOYMENT_TX = '0x3ad3f57eb8d419b6ebe6a60208b879241fcde303f9176cb14e8ecb8a310c8480';
 
 async function rpc(method, params = []) {
   const response = await fetch(RPC, {

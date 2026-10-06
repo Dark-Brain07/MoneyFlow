@@ -2,7 +2,7 @@
 
 ## Canonical deployment boundary
 
-The production contract is frozen at commit `c628a86951d59de4c774d89cb4c8ae5cbb1e4e47`, SHA-256 `0aac468a81efe683798271e0c38c6e582eeef515386bb8e4a1d8eed8defd72b4`, and Git blob `b8c351464cf876fedb1c1b0312670a1a4d693b5b`. The canonical deployment is `0xB99Bb11Cf0d0DC684A6b7E3653C168b7E397723F` on Studionet `61999`. Repository automation rechecks the source fingerprint and canonical live deployment rather than silently redeploying.
+The production contract is frozen at commit `c628a86951d59de4c774d89cb4c8ae5cbb1e4e47`, SHA-256 `0aac468a81efe683798271e0c38c6e582eeef515386bb8e4a1d8eed8defd72b4`, and Git blob `b8c351464cf876fedb1c1b0312670a1a4d693b5b`. The canonical deployment is `0x9251D88840bCa34A2b9f60AE3fAC407afcAe89C0` on Studionet `61999`. Repository automation rechecks the source fingerprint and canonical live deployment rather than silently redeploying.
 
 ## Protected properties
 

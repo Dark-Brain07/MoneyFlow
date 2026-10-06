@@ -4,8 +4,8 @@
 
 - Contract implementation: ✅ frozen deployed `contracts/MoneyFlow.py`
 - Canonical deployed source: `c628a86951d59de4c774d89cb4c8ae5cbb1e4e47`
-- Canonical contract: `0xB99Bb11Cf0d0DC684A6b7E3653C168b7E397723F`
-- Deployment tx: `0xdcbcc202405a347997641c560e09d9167131cc581a37474fc28fd2e9e1d78425`
+- Canonical contract: `0x9251D88840bCa34A2b9f60AE3fAC407afcAe89C0`
+- Deployment tx: `0x3ad3f57eb8d419b6ebe6a60208b879241fcde303f9176cb14e8ecb8a310c8480`
 - Network: GenLayer Studionet `61999`
 - Runtime: `v0.2.16`
 - Contract Git blob: ✅ `b8c351464cf876fedb1c1b0312670a1a4d693b5b`

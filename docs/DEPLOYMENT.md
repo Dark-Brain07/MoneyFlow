@@ -7,12 +7,12 @@ Money Cycle is already deployed. Do **not** redeploy or modify `contracts/Money 
 - Network: **GenLayer Studionet**
 - Chain ID: **61999**
 - RPC: `https://studio.genlayer.com/api`
-- Explorer: https://explorer-studio.genlayer.com/address/0xB99Bb11Cf0d0DC684A6b7E3653C168b7E397723F
-- Canonical contract: `0xB99Bb11Cf0d0DC684A6b7E3653C168b7E397723F`
+- Explorer: https://explorer-studio.genlayer.com/address/0x9251D88840bCa34A2b9f60AE3fAC407afcAe89C0
+- Canonical contract: `0x9251D88840bCa34A2b9f60AE3fAC407afcAe89C0`
 - Canonical deployed source commit: `c628a86951d59de4c774d89cb4c8ae5cbb1e4e47`
 - Source SHA-256: `0aac468a81efe683798271e0c38c6e582eeef515386bb8e4a1d8eed8defd72b4`
 - Git blob: `b8c351464cf876fedb1c1b0312670a1a4d693b5b`
-- Deployment transaction: https://explorer-studio.genlayer.com/tx/0xdcbcc202405a347997641c560e09d9167131cc581a37474fc28fd2e9e1d78425
+- Deployment transaction: https://explorer-studio.genlayer.com/tx/0x3ad3f57eb8d419b6ebe6a60208b879241fcde303f9176cb14e8ecb8a310c8480
 - Runtime: `v0.2.16`
 - Depends runner: `py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6`
 - Constructor arguments: none
